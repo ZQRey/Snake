@@ -10,7 +10,7 @@ import java.util.Random;
  * Created by infuntis on 15/01/17.
  */
 public class GameField extends JPanel implements ActionListener {
-    private final int SIZE = 300;
+    private final int SIZE = 320;
     private final int DOT_SIZE = 16;
     private final int ALL_DOTS = 400;
     private Image dot;
@@ -50,13 +50,19 @@ public class GameField extends JPanel implements ActionListener {
 
     public void createApple() {
         appleX = new Random().nextInt(20) * DOT_SIZE;
+        if (appleX > SIZE){
+            appleX = SIZE;
+        }
         appleY = new Random().nextInt(20) * DOT_SIZE;
+        if (appleY > SIZE){
+            appleY = SIZE;
+        }
     }
 
     public void loadImages() {
-        ImageIcon iia = new ImageIcon("src\\apple.png");
+        ImageIcon iia = new ImageIcon("apple.png");
         apple = iia.getImage();
-        ImageIcon iid = new ImageIcon("src\\dots.png");
+        ImageIcon iid = new ImageIcon("dots.png");
         dot = iid.getImage();
     }
 
