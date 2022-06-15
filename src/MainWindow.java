@@ -4,7 +4,7 @@ import javax.swing.*;
 public class MainWindow extends JFrame {
 
     public MainWindow(){
-        setTitle("Змейка");
+        setTitle("Snake V0.1");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(320, 345);
         setLocation(400,400);
