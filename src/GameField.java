@@ -54,7 +54,7 @@ public class GameField extends JPanel implements ActionListener {
             appleX = SIZE;
         }
         appleY = new Random().nextInt(20) * DOT_SIZE;
-        if (appleY > SIZE){
+        if (appleY > SIZE || appleY < 25){
             appleY = SIZE;
         }
     }
